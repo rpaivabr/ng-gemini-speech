@@ -30,7 +30,6 @@ export class SpeechService {
     }
 
     const utterance = new SpeechSynthesisUtterance();
-    utterance.rate = 2;
     utterance.lang = "pt-BR";
     utterance.text = text
       .replace(/[^\p{L}\p{N}\p{P}\p{Z}^$\n]/gu, '')
