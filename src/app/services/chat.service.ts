@@ -7,7 +7,7 @@ import { from, map, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ChatService {
-  genAI = new GoogleGenerativeAI('AIzaSyCtS9lnta8OxsmmDSUVXKkcAx1J-WCy8pI');
+  genAI = new GoogleGenerativeAI(localStorage.getItem('API_KEY')!);
   model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
   chatSession = this.model.startChat({ history: [] });
 
